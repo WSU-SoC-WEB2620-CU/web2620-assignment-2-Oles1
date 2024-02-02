@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A02 Flexbox Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Project Starter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
-
-<body>
-  <!--  Your HTML goes here-->
-  <h1>Welcome to WEB 2620!!!!!</h1>
-<script type="module" src="./javascripts/main.js"></script>
-</body>
+  <body>
+    <div class="wraper">
+      <div class="top-div">
+        <div class="nav">1</div>
+        <div class="nav">2</div>
+        <div class="nav">3</div>
+        <div class="nav">4</div>
+        <div class="nav">5</div>
+      </div>
+      <div class="main">
+        <div class="main-left"></div>
+        <!-- Main Left -->
+        <div class="main-right">
+          <div class="main-right-top"></div>
+          <!-- Main Right Top -->
+          <div class="main-right-bottom">
+            <div class="two-bottom-left margin-right">
+              <div class="inner-left-top margin-bottom">1</div>
+              <div class="inner-left-bottom">2</div>
+            </div>
+            <div class="two-bottom-right">
+              <div class="inner-right-top margin-bottom">3</div>
+              <div class="inner-right-bottom">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"></div>
+      <!-- Footer -->
+    </div>
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>

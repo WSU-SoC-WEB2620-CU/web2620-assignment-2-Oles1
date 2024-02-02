@@ -1,1 +1,193 @@
-// Your styles go here
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  --body-background: rgb(206, 206, 185);
+  --wraper-background: grey;
+  --section-background: ivory;
+  --dark-background: black;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* UTILITIES */
+body {
+  background-color: var(--body-background);
+  height: 100vh;
+  //   border: 4px solid black;
+}
+
+/* CLASSES  */
+.wraper {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 3px solid rgb(49, 48, 48);
+  height: 100%;
+}
+.top-div {
+  //   border: 2px solid red;
+  background-color: var(--section-background);
+  display: flex;
+  padding: 0.8em 0;
+  margin-top: 2em;
+  height: 3em;
+  align-items: center;
+}
+.top-div > .nav + .nav {
+  margin-left: 1em;
+}
+.nav {
+  background-color: var(--dark-background);
+  color: white;
+  flex: 1;
+  text-align: center;
+  height: 1.5em;
+}
+.main {
+  display: flex;
+  background-color: var(--section-background);
+  height: 20rem;
+  padding-bottom: 0.8em;
+}
+.main-left,
+.main-right {
+  flex: 1;
+  background-color: var(--wraper-background);
+}
+.main > * + * {
+  margin-left: 1em;
+}
+.main-right {
+  display: block;
+  background-color: var(--section-background);
+}
+.main-right-top {
+  //   flex: 1;
+  background-color: var(--wraper-background);
+  height: calc(50% - 0.5em);
+}
+.main-right-bottom {
+  //   border: 2px solid green;
+  display: flex;
+  margin-top: 1em;
+  height: calc(50% - 0.5em);
+}
+.inner-left-top,
+.inner-left-bottom,
+.inner-right-top,
+.inner-right-bottom {
+  flex: 1;
+  background-color: var(--dark-background);
+  color: white;
+}
+
+.two-bottom-left,
+.two-bottom-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.margin-right {
+  margin-right: 1em;
+}
+.margin-bottom {
+  margin-bottom: 1em;
+}
+.footer {
+  height: 2em;
+  background-color: var(--wraper-background);
+}
+@media (500px < width <= 800px) {
+  body {
+    background-color: yellowgreen;
+  }
+  .main {
+    display: block;
+  }
+  .main > * {
+    margin: 0;
+  }
+  .main-left {
+    height: 70%;
+    margin: 0;
+  }
+
+  .main-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 30%;
+    // border: 3px solid blue;
+    margin: 0.5em 0;
+  }
+  .main-right-top {
+    margin: 0 0 0 0.5em;
+    flex: 1;
+    // border: 3px solid brown;
+    height: 100%;
+  }
+  .main-right-bottom {
+    margin: 0 0 0 0;
+    flex: 1;
+    // border: 3px solid orange;
+    height: 100%;
+  }
+  .two-bottom-left {
+    margin: 0 0.5em 0 0;
+  }
+  .inner-left-top,
+  .inner-right-top {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (width <= 500px) {
+  body {
+    background-color: lightsalmon;
+  }
+  .top-div {
+    // border: 2px solid red;
+    background-color: var(--section-background);
+    display: block;
+    height: auto;
+
+    padding: 0.5em 0 0;
+  }
+
+  .top-div > .nav + .nav {
+    margin: 0.6em 0;
+  }
+  .main {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 0.5em;
+  }
+  .main-right {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0.5em 0 0 0;
+  }
+  .main-right-top {
+    flex: 1;
+    height: 100%;
+  }
+  .main-right-bottom {
+    flex: 1;
+    margin: 0 0.5em 0 0;
+    flex-direction: column;
+    height: 100%;
+  }
+  .two-bottom-left {
+    margin: 0 0 0.5em 0;
+  }
+
+  .inner-left-top,
+  .inner-right-top {
+    margin-bottom: 0.5em;
+  }
+}
